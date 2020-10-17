@@ -16,6 +16,10 @@ class BoardListView(ListView):
     context_object_name = 'boards'
     template_name = 'home.html'
 
+def portfolio(request):
+    boards = Board.objects.all()
+    return render(request, 'portfolio.html', {'boards': boards})
+
 class TopicListView(ListView):
     model = Topic
     context_object_name = 'topics'

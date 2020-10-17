@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>{% block title %}First Site with Django{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}" />
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
@@ -18,9 +19,10 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="mainMenu">
+                        
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link" href="#">Portfolio</a>
+                            <a class="nav-item nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                             <a class="nav-item nav-link" href="#">Topics</a>
                         </div>
 
